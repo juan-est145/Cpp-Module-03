@@ -8,11 +8,12 @@ class ClapTrap
 {
 private:
 	std::string _name;
-	int hitPoints;
-	int energyPoints;
-	int attackDamage;
+	int _hitPoints;
+	int _energyPoints;
+	int _attackDamage;
 public:
 	ClapTrap(void);
+	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &toCopy);
 	ClapTrap &operator=(const ClapTrap &toCopy);
 	void attack(const std::string &target);
