@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:55:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/06 23:12:28 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/06 23:17:46 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,16 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy)
 		this->_attackDamage = toCopy._attackDamage;
 	}
 	return (*this);
+}
+
+void ClapTrap::attack(const std::string &target)
+{
+	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
+	{
+		std::cout << "Claptrap " << this->_name << " can't attack, it is done for" << std::endl;
+		return ;
+	}
+	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing "
+			  << this->_attackDamage << "points of damage!" << std::endl;
+	this->_energyPoints--;
 }
