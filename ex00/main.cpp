@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:45:57 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 08:43:55 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 08:49:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main(void)
 	ClapTrap joaquin("Joaquin");
 	joaquin.takeDamage(4);
 	joaquin.takeDamage(5);
+	joaquin.beRepaired(0);
 	joaquin.beRepaired(20);
 	joaquin.takeDamage(40);
 	joaquin.beRepaired(10);
