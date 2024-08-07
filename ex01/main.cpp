@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:45:57 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 13:22:03 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:12:48 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ int main(void)
 	ClapTrap paco("Paco");
 
 	for (unsigned int i = 0; i < 11; i++)
-	{
 		paco.attack("Enemy");
-	}
 	paco.beRepaired(25);
 	
 	ClapTrap joaquin("Joaquin");
@@ -30,5 +28,14 @@ int main(void)
 	joaquin.beRepaired(20);
 	joaquin.takeDamage(40);
 	joaquin.beRepaired(10);
+
+	ScavTrap manolo("Manolo");
+	for (unsigned int i = 0; i < 51; i++)
+		manolo.attack("New enemy");
+	manolo.guardGate();
+	manolo.beRepaired(100);
+	manolo.takeDamage(50);
+	manolo.takeDamage(50);
+	manolo.beRepaired(100);
 	return (0);
 }

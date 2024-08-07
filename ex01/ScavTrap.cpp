@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 12:55:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:00:55 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:08:13 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,9 @@ void ScavTrap::beRepaired(unsigned int amount)
 void ScavTrap::guardGate(void)
 {
 	std::cout << "Scavtrap " << this->_name << " is in Gate keeper mode" << std::endl;
+}
+
+ScavTrap::~ScavTrap(void)
+{
+	std::cout << "Scavtrap destructor was called" << std::endl;
 }
