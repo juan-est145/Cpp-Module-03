@@ -12,6 +12,9 @@ private:
 	std::string _name;
 public:
 	DiamondTrap(void);
+	DiamondTrap(std::string name);
+	DiamondTrap(const DiamondTrap &toCopy);
+	DiamondTrap &operator=(const DiamondTrap &toCopy);
 	using ScavTrap::attack;
 	void whoAmI();
 	~DiamondTrap(void);
