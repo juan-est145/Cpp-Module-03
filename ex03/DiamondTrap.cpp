@@ -21,3 +21,12 @@ DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
 	this->_attackDamage = this->FragTrap::_attackDamage;
 }
 
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
+{
+	std::cout << "DiamondTrap name parameter constructor has been called" << std::endl;
+	this->_name = name;
+	this->ClapTrap::_name += "_clap_name";
+	this->_hitPoints = this->FragTrap::_hitPoints;
+	this->_energyPoints = this->ScavTrap::_energyPoints;
+	this->_attackDamage = this->FragTrap::_attackDamage;
+}
