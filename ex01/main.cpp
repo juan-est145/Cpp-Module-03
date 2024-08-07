@@ -6,11 +6,12 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:45:57 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 08:49:34 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:22:03 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
