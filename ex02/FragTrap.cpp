@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:27:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:56:10 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:59:33 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,18 @@ FragTrap::FragTrap(const FragTrap &toCopy) : ClapTrap(toCopy)
 {
 	std::cout << "Fragtrap copy constructor has been called" << std::endl;
 	*this = toCopy;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &toCopy)
+{
+	std::cout << "FragTrap copy assigment operator was called" << std::endl;
+	if (this != &toCopy)
+	{
+		this->_name = toCopy._name;
+		this->_hitPoints = toCopy._hitPoints;
+		this->_energyPoints = toCopy._energyPoints;
+		this->_attackDamage = toCopy._attackDamage;
+	}
+	return (*this);
 }
 
