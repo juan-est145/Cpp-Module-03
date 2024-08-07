@@ -56,3 +56,8 @@ void DiamondTrap::whoAmI(void)
 	std::cout << "My name is " << this->_name << " and my old ClapTrap name is "
 			  << this->ClapTrap::_name << std::endl;
 }
+
+DiamondTrap::~DiamondTrap(void)
+{
+	std::cout << "DiamondTrap destructor has been called" << std::endl;
+}
