@@ -15,6 +15,7 @@
 DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout << "DiamondTrap default constructor has been called" << std::endl;
+	this->_name = "No name";
 	this->ClapTrap::_name += "_clap_name";
 	this->_hitPoints = this->FragTrap::_hitPoints;
 	this->_energyPoints = this->ScavTrap::_energyPoints;
@@ -35,4 +36,17 @@ DiamondTrap::DiamondTrap(const DiamondTrap &toCopy) : ClapTrap(toCopy), ScavTrap
 {
 	std::cout << "DiamondTrap copy constructor has been called" << std::endl;
 	*this = toCopy;
+}
+
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &toCopy)
+{
+	if (this != &toCopy)
+	{
+		this->_name = toCopy._name;
+		this->ClapTrap::_name = toCopy.ClapTrap::_name;
+		this->_hitPoints = toCopy._hitPoints;
+		this->_energyPoints = toCopy._energyPoints;
+		this->_attackDamage = toCopy._attackDamage;
+	}
+	return (*this);
 }
