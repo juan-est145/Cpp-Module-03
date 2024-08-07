@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 12:55:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:55:12 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:15:39 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void ScavTrap::attack(const std::string &target)
 {
 	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
 	{
-		std::cout << "Scavtrap " << this->_name << " can't attack, it is done for" << std::endl;
+		std::cout << "Scavtrap " << this->_name << " can't attack, it is done for!!!" << std::endl;
 		return;
 	}
 	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing "
@@ -76,7 +76,7 @@ void ScavTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
 	{
-		std::cout << "Scavtrap " << this->_name << " can't repair itself, it is done for"
+		std::cout << "Scavtrap " << this->_name << " can't repair itself, it is done for!!!"
 				  << std::endl;
 		return;
 	}

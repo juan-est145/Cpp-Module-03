@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:27:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 17:09:31 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:15:39 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void FragTrap::attack(const std::string &target)
 {
 	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
 	{
-		std::cout << "Fragtrap " << this->_name << " can't attack, it is done for" << std::endl;
+		std::cout << "Fragtrap " << this->_name << " can't attack, it is done for!!!" << std::endl;
 		return;
 	}
 	std::cout << "FragTrap " << this->_name << " attacks " << target << ", causing "
@@ -76,7 +76,7 @@ void FragTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
 	{
-		std::cout << "Fragtrap " << this->_name << " can't repair itself, it is done for"
+		std::cout << "Fragtrap " << this->_name << " can't repair itself, it is done for!!!"
 				  << std::endl;
 		return;
 	}

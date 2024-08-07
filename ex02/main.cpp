@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:45:57 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:49:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:15:02 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,15 @@ int main(void)
 	manolo.takeDamage(50);
 	manolo.takeDamage(50);
 	manolo.beRepaired(100);
+
+	FragTrap jimeno("Jimeno");
+	jimeno.beRepaired(100);
+	for (unsigned int i = 0; i < 100; i++)
+		jimeno.attack("Another new enemy");
+	jimeno.highFivesGuys();
+	jimeno.takeDamage(100);
+	jimeno.beRepaired(100);
+	jimeno.takeDamage(100);
+	jimeno.beRepaired(200);
 	return (0);
 }
