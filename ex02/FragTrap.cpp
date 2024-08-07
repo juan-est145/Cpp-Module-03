@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:27:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:40:29 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:47:39 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "Fragtrap default constructor has been called" << std::endl;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
+{
+	std::cout << "Fragtrap string parameter constructor has been called" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
