@@ -6,13 +6,14 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 22:45:57 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 17:15:02 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 19:31:00 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
@@ -29,6 +30,7 @@ int main(void)
 	joaquin.beRepaired(20);
 	joaquin.takeDamage(40);
 	joaquin.beRepaired(10);
+	std::cout << std::endl;
 
 	ScavTrap manolo("Manolo");
 	for (unsigned int i = 0; i < 51; i++)
@@ -38,6 +40,7 @@ int main(void)
 	manolo.takeDamage(50);
 	manolo.takeDamage(50);
 	manolo.beRepaired(100);
+	std::cout << std::endl;
 
 	FragTrap jimeno("Jimeno");
 	jimeno.beRepaired(100);
@@ -48,5 +51,13 @@ int main(void)
 	jimeno.beRepaired(100);
 	jimeno.takeDamage(100);
 	jimeno.beRepaired(200);
+	std::cout << std::endl;
+
+	DiamondTrap sisebuto("Sisebuto");
+	sisebuto.whoAmI();
+	sisebuto.guardGate();
+	sisebuto.highFivesGuys();
+	for (unsigned int i = 0; i < 101; i++)
+		sisebuto.attack("Final boss");
 	return (0);
 }
