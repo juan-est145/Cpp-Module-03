@@ -50,3 +50,9 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &toCopy)
 	}
 	return (*this);
 }
+
+void DiamondTrap::whoAmI(void)
+{
+	std::cout << "My name is " << this->_name << " and my old ClapTrap name is "
+			  << this->ClapTrap::_name << std::endl;
+}
