@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 12:55:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 13:37:52 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:45:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,17 @@ ScavTrap::ScavTrap(const ScavTrap &toCopy) : ClapTrap(toCopy)
 {
 	std::cout << "ScavTrap copy constructor was called" << std::endl;
 	*this = toCopy;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy)
+{
+	std::cout << "ScavTrap copy assigment operator was called" << std::endl;
+	if (this != &toCopy)
+	{
+		this->_name = toCopy._name;
+		this->_hitPoints = toCopy._hitPoints;
+		this->_energyPoints = toCopy._energyPoints;
+		this->_attackDamage = toCopy._attackDamage;
+	}
+	return (*this);
 }
