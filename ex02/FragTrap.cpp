@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:27:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 16:47:39 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 16:56:10 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,10 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
 }
+
+FragTrap::FragTrap(const FragTrap &toCopy) : ClapTrap(toCopy)
+{
+	std::cout << "Fragtrap copy constructor has been called" << std::endl;
+	*this = toCopy;
+}
+
