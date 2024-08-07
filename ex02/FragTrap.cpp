@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 16:27:16 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 17:07:14 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:09:31 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,14 @@ void FragTrap::beRepaired(unsigned int amount)
 	std::cout << "Fragtrap " << this->_name << " repairs " << amount << " hit points "
 			  << "which leaves it with " << this->_hitPoints << " hit points" << std::endl;
 	this->_energyPoints--;
+}
+
+void FragTrap::highFivesGuys(void)
+{
+	std::cout << "Fragtrap " << this->_name << " requests a high five!!"<< std::endl;
+}
+
+FragTrap::~FragTrap(void)
+{
+	std::cout << "Flagtrap destructor has been called" << std::endl;
 }
