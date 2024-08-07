@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 12:55:52 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/07 13:45:34 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:50:04 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 }
+
 //Test this later with both code inside the brackets and without out
 ScavTrap::ScavTrap(const ScavTrap &toCopy) : ClapTrap(toCopy)
 {
@@ -34,7 +35,7 @@ ScavTrap::ScavTrap(const ScavTrap &toCopy) : ClapTrap(toCopy)
 	*this = toCopy;
 }
 
-ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy)
+ScavTrap &ScavTrap::operator=(const ScavTrap &toCopy)
 {
 	std::cout << "ScavTrap copy assigment operator was called" << std::endl;
 	if (this != &toCopy)
@@ -45,4 +46,16 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &toCopy)
 		this->_attackDamage = toCopy._attackDamage;
 	}
 	return (*this);
+}
+
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->_energyPoints <= 0 || this->_hitPoints <= 0)
+	{
+		std::cout << "Scavtrap " << this->_name << " can't attack, it is done for" << std::endl;
+		return;
+	}
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing "
+			  << this->_attackDamage << " points of damage!" << std::endl;
+	this->_energyPoints--;
 }
